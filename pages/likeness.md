@@ -1,8 +1,8 @@
 ---
-title: Drug-Drug Interaction Analysis & Prediction
+title: Landing
 layout: landing
-description: 'Analyse Drug-Drug pair for the severity of their antagonistic interaction and define predictive model'
-image: assets/images/pic07.jpg
+description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+image: assets/images/likeness.jpg
 nav-menu: true
 ---
 
