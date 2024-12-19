@@ -1,7 +1,7 @@
 ---
 title: Drug's Likeness Analysis
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+description: Convey analysis of drug's effectiveness on bonding with the target and select the most "likable" ones.
 image: assets/images/likeness.jpg
 nav-menu: true
 ---
