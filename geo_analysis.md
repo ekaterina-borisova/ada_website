@@ -89,11 +89,15 @@ To better quantify the relationship between prevalence and research, we perform 
 
 ## Region-Region ols heatmap
 
+![alt text]({% link assets/images/region_region_ols_heatmap.png %})
+
 The numbers and colors shown can be best described as measures of the proportions of research conducted in a region given the proportions of a disease's prevalence per capita in a region. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however, there are some relationships in between regions that appear to be stronger. For example, the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive. However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).
 
 What happens if we look at the relationship between the prevalence of a disease in a region and the number of experiments conducted on it in each individual country? The heatmap below shows the results of the linear regression analysis:
 
 ## Country-Country ols heatmap
+
+![alt text]({% link assets/images/country_country_ols_heatmap.png %})
 
 The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, research in France is positively related to disease prevalence in Africa. In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases describe relationships where geographical proportions of disease prevalence per capita predict the proportions of research conducted on the disease in a certain country.
 
