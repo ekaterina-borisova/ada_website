@@ -2,7 +2,7 @@
 title: Drug-Drug Interaction Analysis & Prediction
 layout: landing
 description: 'Analyse Drug-Drug pair for the severity of their antagonistic interaction and define predictive model'
-image: assets/images/ddi.jpg
+image: assets/images/ddi.png
 nav-menu: true
 ---
 
