@@ -25,8 +25,8 @@ nav-menu: true
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/Top_10_Countries_by_number_of_institutions.png %}" alt="" data-position="center center" />
+		<a class="image">
+			{% include countries_with_most_institutions.html %}
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -35,8 +35,8 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/Top_10_Countries_by_number_of_contributions.png %}" alt="" data-position="top center" />
+		<a class="image">
+			{% include top_countries_bar_chart.html %}
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -45,8 +45,8 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/Institutions_by_continent_pie_chart.png %}" alt="" data-position="25% 25%" />
+		<a class="image">
+			{% include institutions_per_continent.html %}
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -55,8 +55,8 @@ nav-menu: true
 		</div>
 	</section>
 		<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/contributions_by_continent_pie_chart.png %}" alt="" data-position="25% 25%" />
+		<a class="image">
+			{% include contribs_by_continents_pie.html %}
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -66,10 +66,57 @@ nav-menu: true
 	</section>
 </section>
 
-<!-- Three -->
-<section id="three">
+<!-- <section id="one">
+    <div class="inner">
+        <header class="major">
+            <h2>World institutions heatmap</h2>
+        </header>
+        <div class="iframe-container" style="position: relative; width: 100%; max-width: 800px; height: 600px; margin: 0 auto;">
+            <!-- Shadow DOM container 
+            <div id="map-container" style="width: 100%; height: 100%; border: 1px solid #ccc; overflow: hidden;">
+                <!-- Placeholder for map content 
+                <!-- This content will be moved to the shadow DOM dynamically 
+                <div id="map-content" style="display: none;">
+                    {% include map.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('map-container');
+    
+    // Create shadow DOM to isolate the styles
+    const shadow = container.attachShadow({mode: 'open'});
+    
+    // Get the content from the #map-content div
+    const mapContent = document.getElementById('map-content').innerHTML;
+
+    // Insert the map content into the shadow DOM
+    shadow.innerHTML = `
+      <style>
+        :host {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        /* Optional: Reset some inherited styles to prevent unwanted behavior */
+        * {
+          box-sizing: border-box;
+        }
+      </style>
+      <div style="width: 100%; height: 100%;">
+        ${mapContent}
+      </div>
+    `;
+  });
+</script> -->
+
+<section id="one">
 	<div class="inner">
-		<p>In conclusion, the graphs show that the majority of research is conducted in Europe, North America, and Asia, and most research institutions are also located in these regions.</p>
+		<p>In conclusion, the graphs show that the majority of research is conducted in Europe, North America, and Asia, and most research institutions are also located in these regions. They also show that the USA stands out as the country with the highest number of institutions conducting experiments and making the most contributions, followed by China in second place.</p>
 	</div>
 </section>
 
@@ -91,8 +138,8 @@ nav-menu: true
 
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/proportion_of_experiments_given_TSO.png %}" alt="" data-position="center center" />
+		<a class="image">
+			{% include proportions_of_experiments_given_TSO.html %}
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -147,8 +194,8 @@ nav-menu: true
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/diseases_per_region.png %}" alt="" data-position="center center" />
+		<a class="image">
+			<img src="{% link assets/images/who_heatmap.png %}" alt="" data-position="center center" />
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -157,12 +204,12 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/number_of_research_studies_by_disease_and_region.png %}" alt="" data-position="top center" />
+		<a class="image">
+			<img src="{% link assets/images/research_heatmap.png %}" alt="" data-position="center center" />
 		</a>
 		<div class="content">
 			<div class="inner">
-				<p>The heatmap below the number of research experiments by disease and continent. The number of research experiments is normalized for each disease, hence a red squares correspond to the regions with the most research on a disease and dark blue squares correspond to the regions with the least research on a disease. The heatmap reveals that Africa has the least amount of research conducted on these diseases, while America leads with the most research. Europe comes in second. </p>
+				<p>The heatmap shows the number of research experiments by disease and region. The number of research experiments is normalized for each disease. The heatmap reveals that Africa has the least amount of research conducted on the diseases, while America leads with the most research. Europe comes in second. </p>
 			</div>
 		</div>
 	</section>
@@ -188,17 +235,38 @@ nav-menu: true
 		</header>
 		<p>
 			Having data on quantity of research and disease prevalence in different countries, we can now analyze the relationship between the two. The question of how the prevalence of a disease in a region drives the amount and focus of research conducted there can be answered by comparing the two datasets.
-
 			For each disease, we depict below the prevalence of the given disease against the number of experiments conducted on it:
-
-			{% include plot_HIV.html %}
-			{% include plot_Poliovirus.html %}
-			{% include plot_Plasmodium_vivax.html %}
-			{% include plot_Tuberculosis.html %}
-			{% include plot_Hepatitis_C.html %}
-			{% include plot_Escherichia_coli.html %}
-			{% include plot_Staphylococcus_aureus.html %}
-
+			<div id="plot_HIV" style="width: 100%; margin-left: -50px;">
+				{% include plot_HIV.html %}
+			</div>
+			<br>
+			<div id="plot_Plasmodium_falciparum" style="width: 100%; margin-left: -50px;">
+				{% include plot_Plasmodium_falciparum.html %} 
+			</div>
+			<br>
+			<div id="plot_Poliovirus" style="width: 100%; margin-left: -50px;">
+				{% include plot_Poliovirus.html %}
+			</div>
+			<br>
+			<div id="plot_Plasmodium_vivax" style="width: 100%; margin-left: -50px;">
+				{% include plot_Plasmodium_vivax.html %} 
+			</div>
+			<br>
+			<div id="plot_Tuberculosis" style="width: 100%; margin-left: -50px;">
+				{% include plot_Tuberculosis.html %} 
+			</div>
+			<br>
+			<div id="plot_Hepatitis_C" style="width: 100%; margin-left: -50px;">
+				{% include plot_Hepatitis_C.html %} 
+			</div>
+			<br>
+			<div id="plot_Escherichia_coli" style="width: 100%; margin-left: -50px;">
+				{% include plot_Escherichia_coli.html %} 
+			</div>
+			<br>
+			<div id="plot_Staphylococcus_aureus" style="width: 100%; margin-left: -50px;">
+				{% include plot_Staphylococcus_aureus.html %}
+			</div>
 		</p>
 	</div>
 </section>
@@ -217,8 +285,8 @@ nav-menu: true
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/region_region_ols_heatmap.png %}" alt="" data-position="center center" />
+		<a class="image">
+			<img src="{% link assets/images/region_region_heatmap.png %}" alt="" style="margin-top: 75px;" />
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -239,8 +307,8 @@ nav-menu: true
 </section>
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/country_country_ols_heatmap.png %}" alt="" data-position="top center" />
+		<a class="image">
+			<img src="{% link assets/images/region_country_heatmap.png %}" alt="" style="margin-top: 75px;"/>
 		</a>
 		<div class="content">
 			<div class="inner">
