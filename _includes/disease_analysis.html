@@ -103,7 +103,7 @@
       const description = document.getElementById('description').querySelector('p');
       const plotContent = document.getElementById(selectedValue).innerHTML;
       plotContainer.innerHTML = plotContent;
-      description.textContent = descriptions[selectedValue];
+      description.textContent = '';
   }
 
   document.addEventListener('DOMContentLoaded', function() {
