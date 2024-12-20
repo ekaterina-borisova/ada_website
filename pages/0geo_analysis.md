@@ -191,42 +191,20 @@ nav-menu: true
 
 <!-- Two -->
 <section id="two" class="spotlights">
-	<section style="display: flex; flex-wrap: wrap; align-items: flex-start;">
-		<div style="flex: 2;">
-			<div style="width: 450px; height: 338px; overflow: hidden; margin-right: -50px;">
-				<iframe 
-					src="../assets/geo_analysis_heatmaps/who_heatmap.html" 
-					style="
-					width: 900px; 
-					height: 676px;  
-					transform: scale(0.5); 
-					transform-origin: top left; 
-					border: none;
-					">
-				</iframe>
-			</div>
-		</div>
+	<section>
+		<a class="image">
+			<img src="{% link assets/images/who_heatmap.png %}" alt=""/>
+		</a>
 		<div class="content">
 			<div class="inner">
 				<p>The heatmap shows the prevalences per capita of these diseases in different regions of the world in proportion to each other. We can for example observe that many diseases are more prevalent in regions such as Africa and Eastern Mediterranean, as opposed to the Americas and Western Pacific.</p>
 			</div>
 		</div>
 	</section>
-	<section style="display: flex; flex-wrap: wrap; align-items: flex-start;">
-		<div style="flex: 2;">
-			<div style="width: 450px; height: 338px; overflow: hidden; margin-right: -50px;">
-				<iframe 
-					src="../assets/geo_analysis_heatmaps/research_heatmap.html" 
-					style="
-					width: 900px; 
-					height: 676px; 
-					transform: scale(0.5); 
-					transform-origin: top left; 
-					border: none;
-					">
-				</iframe>
-			</div>
-		</div>
+	<section>
+		<a class="image">
+			<img src="{% link assets/images/who_heatmap.png %}" alt=""/>
+		</a>
 		<div class="content">
 			<div class="inner">
 				<p>The heatmap shows the number of research experiments on these diseases in different regions of the world in proportion to each other. The heatmap reveals that Africa has the least amount of research conducted on these diseases, while America leads with the most research. Europe comes in second. </p>
@@ -274,6 +252,7 @@ nav-menu: true
 </section>
 
 <!-- Two -->
+<<<<<<< HEAD
 <section id="two" class="spotlights" style="padding: 20px;">
     <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; max-width: 1200px; margin: 0 auto;">
         <!-- Heatmap on the Left -->
@@ -298,35 +277,45 @@ nav-menu: true
             </div>
         </div>
     </div>
+=======
+<section id="two" class="spotlights">
+	<section>
+		<a class="image">
+			<img src="{% link assets/images/region_region_heatmap.png %}" alt="" style="margin-top: 75px;" />
+		</a>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h2>Region-Region ols heatmap</h2>
+				</header>
+				<p>The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive. However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
+			</div>
+		</div>
+	</section>
+>>>>>>> 4f359ecd5832f9af7a528cdd9f6d1e868917117a
 </section>
-
 <!-- Three -->
-<section id="three" class="spotlights" style="padding: 20px;">
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; max-width: 1600px; margin: 0 auto;">
-        <!-- Heatmap on the Left -->
-        <div style="flex: 3; text-align: center;">
-            <iframe 
-                src="../assets/geo_analysis_heatmaps/region_country_heatmap.html" 
-                style="
-                    width: 100%; 
-                    height: 700px; 
-                    border: none;">
-            </iframe>
-        </div>
-        <!-- Text Content on the Right -->
-        <div class="content" style="flex: 2; max-width: 500px;">
-            <div class="inner" style="padding: 20px;">
-                <header class="major">
-                    <h2>Research Studies on Disease Prevalence</h2>
-                </header>
-                <p>
-                    The heatmap shows the number of research experiments on these diseases in different regions of the world in proportion to each other. The heatmap reveals that Africa has the least amount of research conducted on these diseases, while America leads with the most research. Europe comes in second.
-                </p>
-            </div>
-        </div>
-    </div>
+<section id="three">
+	<div class="inner">
+		<p>What happens if we look at the relationship between the prevalence of a disease in a region and the number of experiments conducted on it in each individual country? The heatmap below shows the results of the linear regression analysis:
+		</p>
+	</div>
 </section>
-
+<section id="two" class="spotlights">
+	<section>
+		<a class="image">
+			<img src="{% link assets/images/region_country_heatmap.png %}" alt="" style="margin-top: 75px;"/>
+		</a>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h2>Country-Country ols heatmap</h2>
+				</header>
+				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, research in France is positively related to disease prevalence in Africa. In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
+			</div>
+		</div>
+	</section>
+</section>
 <!-- Three -->
 <section id="three">
 	<div class="inner">
