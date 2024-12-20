@@ -251,33 +251,6 @@ nav-menu: true
 	</div>
 </section>
 
-<!-- Two -->
-<<<<<<< HEAD
-<section id="two" class="spotlights" style="padding: 20px;">
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; max-width: 1200px; margin: 0 auto;">
-        <!-- Heatmap on the Left -->
-        <div style="flex-grow: 2; text-align: center;">
-            <iframe 
-                src="../assets/geo_analysis_heatmaps/region_region_heatmap.html" 
-                style="
-                    width: 100%; 
-                    height: 600px; 
-                    border: none;">
-            </iframe>
-        </div>
-        <!-- Text Content on the Right -->
-        <div class="content" style="flex-grow: 1; max-width: 400px;">
-            <div class="inner" style="padding: 20px;">
-                <header class="major">
-                    <h2>Regional Disease Prevalences per Capita</h2>
-                </header>
-                <p>
-                    The heatmap shows the prevalences per capita of these diseases in different regions of the world in proportion to each other. For example, we can observe that many diseases are more prevalent in regions such as Africa and Eastern Mediterranean, as opposed to the Americas and Western Pacific.
-                </p>
-            </div>
-        </div>
-    </div>
-=======
 <section id="two" class="spotlights">
 	<section>
 		<a class="image">
@@ -292,7 +265,6 @@ nav-menu: true
 			</div>
 		</div>
 	</section>
->>>>>>> 4f359ecd5832f9af7a528cdd9f6d1e868917117a
 </section>
 <!-- Three -->
 <section id="three">
