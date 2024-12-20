@@ -1,119 +1,122 @@
 <!-- _includes/disease_analysis.html -->
 <div class="disease-analysis">
-  <div class="selector-container">
-      <label for="disease-select" class="selector-label">Select Disease for Analysis:</label>
-      <select id="disease-select" class="disease-dropdown">
-          <option value="plot_HIV">Human Immunodeficiency Virus</option>
-          <option value="plot_Plasmodium_falciparum">Plasmodium falciparum</option>
-          <option value="plot_Poliovirus">Poliovirus</option>
-          <option value="plot_Plasmodium_vivax">Plasmodium vivax</option>
-          <option value="plot_Tuberculosis">Mycobacterium tuberculosis</option>
-          <option value="plot_Escherichia_coli">Escherichia coli</option>
-          <option value="plot_Hepatitis_C">Hepatitis C</option>
-          <option value="plot_Staphylococcus_aureus">Staphylococcus aureus</option>
-      </select>
-  </div>
+    <div class="selector-container">
+        <label for="disease-select" class="selector-label">Select Disease for Analysis:</label>
+        <select id="disease-select" class="disease-dropdown">
+            <option value="plot_HIV">Human Immunodeficiency Virus</option>
+            <option value="plot_Plasmodium_falciparum">Plasmodium falciparum</option>
+            <option value="plot_Poliovirus">Poliovirus</option>
+            <option value="plot_Plasmodium_vivax">Plasmodium vivax</option>
+            <option value="plot_Tuberculosis">Mycobacterium tuberculosis</option>
+            <option value="plot_Escherichia_coli">Escherichia coli</option>
+            <option value="plot_Hepatitis_C">Hepatitis C</option>
+            <option value="plot_Staphylococcus_aureus">Staphylococcus aureus</option>
+        </select>
+    </div>
 
-  <!-- Store all plots in hidden divs -->
-  <div id="plot-storage" style="display: none;">
-      <div id="plot_HIV">{% include plot_HIV.html %}</div>
-      <div id="plot_Plasmodium_falciparum">{% include plot_Plasmodium_falciparum.html %}</div>
-      <div id="plot_Poliovirus">{% include plot_Poliovirus.html %}</div>
-      <div id="plot_Plasmodium_vivax">{% include plot_Plasmodium_vivax.html %}</div>
-      <div id="plot_Tuberculosis">{% include plot_Tuberculosis.html %}</div>
-      <div id="plot_Escherichia_coli">{% include plot_Escherichia_coli.html %}</div>
-      <div id="plot_Hepatitis_C">{% include plot_Hepatitis_C.html %}</div>
-      <div id="plot_Staphylococcus_aureus">{% include plot_Staphylococcus_aureus.html %}</div>
-  </div>
+    <!-- All plots in container with display control -->
+    <div id="plot-container" class="plot-container">
+        <div id="plot_HIV" class="plot-item">{% include plot_HIV.html %}</div>
+        <div id="plot_Plasmodium_falciparum" class="plot-item" style="display: none;">{% include plot_Plasmodium_falciparum.html %}</div>
+        <div id="plot_Poliovirus" class="plot-item" style="display: none;">{% include plot_Poliovirus.html %}</div>
+        <div id="plot_Plasmodium_vivax" class="plot-item" style="display: none;">{% include plot_Plasmodium_vivax.html %}</div>
+        <div id="plot_Tuberculosis" class="plot-item" style="display: none;">{% include plot_Tuberculosis.html %}</div>
+        <div id="plot_Escherichia_coli" class="plot-item" style="display: none;">{% include plot_Escherichia_coli.html %}</div>
+        <div id="plot_Hepatitis_C" class="plot-item" style="display: none;">{% include plot_Hepatitis_C.html %}</div>
+        <div id="plot_Staphylococcus_aureus" class="plot-item" style="display: none;">{% include plot_Staphylococcus_aureus.html %}</div>
+    </div>
 
-  <div id="plot-container" class="plot-container">
-  </div>
-
-  <div id="description" class="description-container">
-      <p></p>
-  </div>
+    <div id="description" class="description-container">
+        <p>Analysis of HIV research distribution reveals significant research activity in regions with varying prevalence rates.</p>
+    </div>
 </div>
 
 <style>
-  .disease-analysis {
-      margin: 20px 0;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-  }
+    .disease-analysis {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+    }
 
-  .selector-container {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-  }
+    .selector-container {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
 
-  .selector-label {
-      font-weight: 500;
-      color: #333;
-      min-width: 200px;
-  }
+    .selector-label {
+        font-weight: 500;
+        color: #333;
+        min-width: 200px;
+    }
 
-  .disease-dropdown {
-      padding: 8px 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-      min-width: 250px;
-      background-color: rgb(46, 51, 97);
-  }
+    .disease-dropdown {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        min-width: 250px;
+        background-color: white;
+    }
 
-  .plot-container {
-      margin-top: 20px;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 4px;
-  }
+    .plot-container {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
 
-  .description-container {
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #f8f9fa;
-      border-radius: 4px;
-      border-left: 4px solid #0066cc;
-  }
+    .description-container {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        border-left: 4px solid #0066cc;
+    }
 
-  .description-container p {
-      margin: 0;
-      line-height: 1.6;
-      color: #444;
-  }
+    .description-container p {
+        margin: 0;
+        line-height: 1.6;
+        color: #444;
+    }
 </style>
 
 <script>
-  const descriptions = {
-      'plot_HIV': 'Analysis of HIV research distribution reveals significant research activity in regions with varying prevalence rates.',
-      'plot_Plasmodium_falciparum': 'Distribution of P. falciparum research demonstrates complex relationships between endemic regions and research centers.',
-      'plot_Poliovirus': 'Poliovirus research patterns show historical trends and current focus areas.',
-      'plot_Plasmodium_vivax': 'P. vivax research distribution indicates varying research priorities across regions.',
-      'plot_Tuberculosis': 'Tuberculosis research shows global distribution patterns with notable variations.',
-      'plot_Escherichia_coli': 'E. coli research demonstrates wide geographical distribution.',
-      'plot_Hepatitis_C': 'Hepatitis C research distribution reveals global patterns in research focus.',
-      'plot_Staphylococcus_aureus': 'S. aureus research patterns indicate global distribution of research efforts.'
-  };
+    const descriptions = {
+        'plot_HIV': 'Analysis of HIV research distribution reveals significant research activity in regions with varying prevalence rates.',
+        'plot_Plasmodium_falciparum': 'Distribution of P. falciparum research demonstrates complex relationships between endemic regions and research centers.',
+        'plot_Poliovirus': 'Poliovirus research patterns show historical trends and current focus areas.',
+        'plot_Plasmodium_vivax': 'P. vivax research distribution indicates varying research priorities across regions.',
+        'plot_Tuberculosis': 'Tuberculosis research shows global distribution patterns with notable variations.',
+        'plot_Escherichia_coli': 'E. coli research demonstrates wide geographical distribution.',
+        'plot_Hepatitis_C': 'Hepatitis C research distribution reveals global patterns in research focus.',
+        'plot_Staphylococcus_aureus': 'S. aureus research patterns indicate global distribution of research efforts.'
+    };
 
-  function updatePlot(selectedValue) {
-      const plotContainer = document.getElementById('plot-container');
-      const description = document.getElementById('description').querySelector('p');
-      const plotContent = document.getElementById(selectedValue).innerHTML;
-      plotContainer.innerHTML = plotContent;
-      description.textContent = '';
-  }
+    function updatePlot(selectedValue) {
+        // Hide all plots
+        const plots = document.getElementsByClassName('plot-item');
+        for (let plot of plots) {
+            plot.style.display = 'none';
+        }
+        
+        // Show selected plot
+        const selectedPlot = document.getElementById(selectedValue);
+        if (selectedPlot) {
+            selectedPlot.style.display = 'block';
+        }
 
-  document.addEventListener('DOMContentLoaded', function() {
-      const select = document.getElementById('disease-select');
-      
-      // Show initial plot
-      updatePlot('plot_HIV');
+        // Update description
+        const description = document.getElementById('description').querySelector('p');
+        description.textContent = "";
+    }
 
-      select.addEventListener('change', function() {
-          updatePlot(this.value);
-      });
-  });
+    document.addEventListener('DOMContentLoaded', function() {
+        const select = document.getElementById('disease-select');
+        select.addEventListener('change', function() {
+            updatePlot(this.value);
+        });
+    });
 </script>
