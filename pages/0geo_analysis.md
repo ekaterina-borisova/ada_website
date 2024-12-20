@@ -83,23 +83,7 @@ nav-menu: true
 		
 	</div>
 </section>
-<!-- <section id="one">
-    <div class="inner">
-        <header class="major">
-            <h2>World institutions heatmap</h2>
-        </header>
-        <div class="iframe-container" style="position: relative; width: 100%; max-width: 800px; height: 600px; margin: 0 auto;">
-            <!-- Shadow DOM container 
-            <div id="map-container" style="width: 100%; height: 100%; border: 1px solid #ccc; overflow: hidden;">
-                <!-- Placeholder for map content 
-                <!-- This content will be moved to the shadow DOM dynamically 
-                <div id="map-content" style="display: none;">
-                    {% include map.html %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -263,7 +247,7 @@ nav-menu: true
 
 <!-- Main -->
 <div id="main">
-
+<!--
 <section id="one">
 	<div class="inner">
 		<header class="major">
@@ -306,7 +290,21 @@ nav-menu: true
 		</p>
 	</div>
 </section>
-
+-->
+<section id="one">
+    <div class="inner">
+        <header class="major">
+            <h2>Prevalence-Research Analysis</h2>
+        </header>
+        <p>
+        Having data on quantity of research and disease prevalence in different countries, we can now analyze the relationship between the two. The question of how the prevalence of a disease in a region drives the amount and focus of research conducted there can be answered by studying the correlation between the two datasets.
+		For each disease, we depict below the prevalence of the given disease against the number of experiments conducted on it:
+        </p>
+        <div style="width: 100%;">
+            {% include disease_analysis.html %}
+        </div>
+    </div>
+</section>
 <!-- Three -->
 <section id="three">
 	<div class="inner">
