@@ -6,9 +6,9 @@ image: assets/images/geo_analysis.jpg
 nav-menu: true
 ---
 
- What impact does geography have on the development of drugs? Specifically, does a drug's origin matter in drug-drug interaction? The development of pharmaceuticals is a collaborative effort that often reflects the expertise and innovation of the institutions behind them. This project aims to investigate whether drugs developed within the same institutions exhibit superior interaction profiles compared to those developed independently. One may hypothesise that shared research environments, methodologies, and collaborative networks contribute to a higher likelihood of favorable interactions among drugs originating from the same institution.
+ What impact does **geography** have on the development of drugs? Specifically, does a **drug's origin** matter in drug-drug interaction?? Specifically, does a drug's origin matter in drug-drug interaction? The development of pharmaceuticals is a collaborative effort that often reflects the expertise and innovation of the institutions behind them. This project aims to investigate whether drugs developed within the same institutions exhibit **superior interaction profiles** compared to those developed independently. One may hypothesise that shared research environments, methodologies, and collaborative networks contribute to a higher likelihood of favorable interactions among drugs originating from the same institution.
 
- Another question one could pose is whether the prevalence of a disease in a region has an effect on local drug development? The world is highly interconnected and an outbreak of any disease anywhere is today a menace for the whole world. Are there however any trends one can observe in the location of drug research with respect to the geographical prevalence of a disease?
+ Another question one could pose is whether the prevalence of a disease in a region has an effect on local drug development? The world is highly interconnected and an **outbreak of any disease anywhere is today a menace for the whole world**. Are there however any trends one can observe in the location of drug research with respect to the geographical prevalence of a disease?
 
 <!-- Main -->
 <div id="main">
@@ -18,7 +18,7 @@ nav-menu: true
 		<header class="major">
 			<h2>Some Analysis on BindingDB Dataset</h2>
 		</header>
-		<p>To answer these questions, we use the BindingDB dataset. It provides information on the interactions between proteins and ligands, focusing on binding affinity data. It contains 2,937,206 results on 1,295,089 ligands and 6746 targets. In total, there are 330 different source organisms for the targets. BindingDB provides a plethora of data for each experiment, there are 194 columns. For each experiment, we have the binding affinities constants such as Ki, Kd, IC50 and EC50, we have the ligand’s SMILES representation, the target name, the target source organism and the institution where the experiment was made. Since we want to make a geographical analysis of the trends of research, we focused on institutions that are located only in one country (some companies have multiple faculties in different countries).</p>
+		<p>To answer these questions, we use the BindingDB dataset. It provides information on the interactions between proteins and ligands, focusing on binding affinity data. It contains <strong> 2,937,206 results  on 1,295,089 ligands and 6746 targets</strong>. In total, there are 330 different source organisms for the targets. BindingDB provides a plethora of data for each experiment, there are 194 columns. For each experiment, we have the binding affinities constants such as Ki, Kd, IC50 and EC50, we have the ligand’s SMILES representation, the target name, the target source organism and the institution where the experiment was made. Since we want to make a geographical analysis of the trends of research, we focused on institutions that are located only in one country (some companies have multiple faculties in different countries).</p>
 	</div>
 </section>
 
@@ -40,7 +40,7 @@ nav-menu: true
 		</a>
 		<div class="content">
 			<div class="inner">
-				<p>Based on the graph, the USA has conducted the highest number of experiments listed in the dataset, totaling approximately 380,000. China follows with around 150,000 experiments, while Germany and Italy are next, each contributing roughly 100,000 experiments.</p>
+				<p>Based on the graph,<strong> the USA has conducted the highest number of experiments</strong> listed in the dataset, totaling approximately 380,000. China follows with around 150,000 experiments, while Germany and Italy are next, each contributing roughly 100,000 experiments.</p>
 			</div>
 		</div>
 	</section>
@@ -60,7 +60,7 @@ nav-menu: true
 		</a>
 		<div class="content">
 			<div class="inner">
-				<p>The graph shows that 39.2% of the experiments were conducted in North America, 34.3% in Europe, and 23.5% in Asia, while only 3% took place in Africa, Oceania, and South America combined.</p>
+				<p>The graph shows that <strong>39.2% of the experiments were conducted in North America</strong>, 34.3% in Europe, and 23.5% in Asia, while only 3% took place in Africa, Oceania, and South America combined.</p>
 			</div>
 		</div>
 	</section>
@@ -144,7 +144,7 @@ nav-menu: true
 		</a>
 		<div class="content">
 			<div class="inner">
-				<p>The graph shows that 81.6% of the experiments are conducted on targets derived from Homo sapiens (humans), followed by Rattus norvegicus (rats).</p>
+				<p>The graph shows that <strong>81.6% of the experiments are conducted on targets derived from Homo sapiens </strong>(humans), followed by Rattus norvegicus (rats).</p>
 			</div>
 		</div>
 	</section>
@@ -247,50 +247,7 @@ nav-menu: true
 
 <!-- Main -->
 <div id="main">
-<!--
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h2>Prevalence-Research Analysis</h2>
-		</header>
-		<p>
-			Having data on quantity of research and disease prevalence in different countries, we can now analyze the relationship between the two. The question of how the prevalence of a disease in a region drives the amount and focus of research conducted there can be answered by studying the correlation between the two datasets.
-			For each disease, we depict below the prevalence of the given disease against the number of experiments conducted on it:
-			<div id="plot_HIV" style="width: 100%; margin-left: -50px;">
-				{% include plot_HIV.html %}
-			</div>
-			<br>
-			<div id="plot_Plasmodium_falciparum" style="width: 100%; margin-left: -50px;">
-				{% include plot_Plasmodium_falciparum.html %} 
-			</div>
-			<br>
-			<div id="plot_Poliovirus" style="width: 100%; margin-left: -50px;">
-				{% include plot_Poliovirus.html %}
-			</div>
-			<br>
-			<div id="plot_Plasmodium_vivax" style="width: 100%; margin-left: -50px;">
-				{% include plot_Plasmodium_vivax.html %} 
-			</div>
-			<br>
-			<div id="plot_Tuberculosis" style="width: 100%; margin-left: -50px;">
-				{% include plot_Tuberculosis.html %} 
-			</div>
-			<br>
-			<div id="plot_Hepatitis_C" style="width: 100%; margin-left: -50px;">
-				{% include plot_Hepatitis_C.html %} 
-			</div>
-			<br>
-			<div id="plot_Escherichia_coli" style="width: 100%; margin-left: -50px;">
-				{% include plot_Escherichia_coli.html %} 
-			</div>
-			<br>
-			<div id="plot_Staphylococcus_aureus" style="width: 100%; margin-left: -50px;">
-				{% include plot_Staphylococcus_aureus.html %}
-			</div>
-		</p>
-	</div>
-</section>
--->
+
 <section id="one">
     <div class="inner">
         <header class="major">
