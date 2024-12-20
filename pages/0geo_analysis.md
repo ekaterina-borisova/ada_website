@@ -6,9 +6,9 @@ image: assets/images/geo_analysis.jpg
 nav-menu: true
 ---
 
- What impact does geography have on the development of drugs? Specifically, does drug's origin matter in drug-drug interaction? The development of pharmaceuticals is a collaborative effort that often reflects the expertise and innovation of the institutions behind them. This project aims to investigate whether drugs developed within the same institutions exhibit superior interaction profiles compared to those developed independently. One may hypothesise that shared research environments, methodologies, and collaborative networks contribute to a higher likelihood of favorable interactions among drugs originating from the same institution.
+ What impact does geography have on the development of drugs? Specifically, does a drug's origin matter in drug-drug interaction? The development of pharmaceuticals is a collaborative effort that often reflects the expertise and innovation of the institutions behind them. This project aims to investigate whether drugs developed within the same institutions exhibit superior interaction profiles compared to those developed independently. One may hypothesise that shared research environments, methodologies, and collaborative networks contribute to a higher likelihood of favorable interactions among drugs originating from the same institution.
 
- Does the prevalence of a disease in a region have an effect on local drug development? The world is highly interconnected and an outbreak of any disease anywhere is today a menace for the whole world. Are there however any trends one can observe in the location of drug research with respect to the geographical prevalence of a disease?
+ Another question one could pose is whether the prevalence of a disease in a region has an effect on local drug development? The world is highly interconnected and an outbreak of any disease anywhere is today a menace for the whole world. Are there however any trends one can observe in the location of drug research with respect to the geographical prevalence of a disease?
 
 <!-- Main -->
 <div id="main">
@@ -18,7 +18,7 @@ nav-menu: true
 		<header class="major">
 			<h2>Some Analysis on BindingDB Dataset</h2>
 		</header>
-		<p>To answer these questions, we use the BindingDB dataset. It provides information on the interactions between proteins and ligands, focusing on binding affinity data. It contains 2,937,206 results on 1,295,089 ligands and 6746 targets. In total, there are 330 different source organisms for the targets. BindingDB provides a lot of data for each experiment, there are 194 columns. For each experiment, we have the binding affinities constants such as Ki, Kd, IC50 and EC50, we have the ligand’s SMILES representation, the target name, the target source organism and the institution where the experiment was made. Since we want to make a geographical analysis of the trends of research, we focused on institutions that are located only in one country (some companies have multiple faculties in different countries).</p>
+		<p>To answer these questions, we use the BindingDB dataset. It provides information on the interactions between proteins and ligands, focusing on binding affinity data. It contains 2,937,206 results on 1,295,089 ligands and 6746 targets. In total, there are 330 different source organisms for the targets. BindingDB provides a plethora of data for each experiment, there are 194 columns. For each experiment, we have the binding affinities constants such as Ki, Kd, IC50 and EC50, we have the ligand’s SMILES representation, the target name, the target source organism and the institution where the experiment was made. Since we want to make a geographical analysis of the trends of research, we focused on institutions that are located only in one country (some companies have multiple faculties in different countries).</p>
 	</div>
 </section>
 
@@ -46,7 +46,7 @@ nav-menu: true
 	</section>
 	<section>
 		<a class="image">
-			{% include institutions_per_continent.html %}
+			{% include continents_pie.html %}
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -66,23 +66,24 @@ nav-menu: true
 	</section>
 </section>
 
-<!-- <section id="one">
+<section id="one">
     <div class="inner">
         <header class="major">
-            <h2>World institutions heatmap</h2>
+            <h3>World institutions heatmap</h3>
         </header>
-        <div class="iframe-container" style="position: relative; width: 100%; max-width: 800px; height: 600px; margin: 0 auto;">
-            <!-- Shadow DOM container 
-            <div id="map-container" style="width: 100%; height: 100%; border: 1px solid #ccc; overflow: hidden;">
-                <!-- Placeholder for map content 
-                <!-- This content will be moved to the shadow DOM dynamically 
-                <div id="map-content" style="display: none;">
-                    {% include map.html %}
-                </div>
-            </div>
+        <div class="map-container" style="position: relative; width: 100%; height: 600px;">
+            <iframe 
+                src="../assets/geo_analysis_heatmaps/map.html" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+            </iframe>
         </div>
     </div>
+	<div class="inner">
+		 <p>This heatmap shows the geographical distribution of institutions conducting experiments in the BindingDB dataset. It is a visual confirmation of our previous observations, the contributions to the dataset are driven by a few hotspots. </p>
+		
+	</div>
 </section>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -132,7 +133,7 @@ nav-menu: true
 		<header class="major">
 			<h2>Target based insights</h2>
 		</header>
-		<p>We want to have more insights on the target source organisms. For each target source organism (TSO), we computed the proportion of experiments (for which the source organism of the target is provided) done. </p>
+		<p>We want to have more insights on the target source organisms. For each target source organism (TSO), we calculated the proportion of experiments where the source organism for the target was specified. </p>
 	</div>
 </section>
 
@@ -185,31 +186,50 @@ nav-menu: true
 			<li>Hepatitis C</li>
 			<li>Staphylococcus aureus</li>
 		</ul>
-		<p>
-			For each disease, data on the prevalence in different countries is available from WHO. The heatmap below shows the prevalences per capita of these diseases in different regions of the world in proportion to each other:
-		</p>
 	</div>
 </section>
 
 <!-- Two -->
 <section id="two" class="spotlights">
-	<section>
-		<a class="image">
-			<img src="{% link assets/images/who_heatmap.png %}" alt="" data-position="center center" />
-		</a>
+	<section style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+		<div style="flex: 2;">
+			<div style="width: 450px; height: 338px; overflow: hidden; margin-right: -50px;">
+				<iframe 
+					src="../assets/geo_analysis_heatmaps/who_heatmap.html" 
+					style="
+					width: 900px; 
+					height: 676px;  
+					transform: scale(0.5); 
+					transform-origin: top left; 
+					border: none;
+					">
+				</iframe>
+			</div>
+		</div>
 		<div class="content">
 			<div class="inner">
 				<p>The heatmap shows the prevalences per capita of these diseases in different regions of the world in proportion to each other. We can for example observe that many diseases are more prevalent in regions such as Africa and Eastern Mediterranean, as opposed to the Americas and Western Pacific.</p>
 			</div>
 		</div>
 	</section>
-	<section>
-		<a class="image">
-			<img src="{% link assets/images/research_heatmap.png %}" alt="" data-position="center center" />
-		</a>
+	<section style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+		<div style="flex: 2;">
+			<div style="width: 450px; height: 338px; overflow: hidden; margin-right: -50px;">
+				<iframe 
+					src="../assets/geo_analysis_heatmaps/research_heatmap.html" 
+					style="
+					width: 900px; 
+					height: 676px; 
+					transform: scale(0.5); 
+					transform-origin: top left; 
+					border: none;
+					">
+				</iframe>
+			</div>
+		</div>
 		<div class="content">
 			<div class="inner">
-				<p>The heatmap shows the number of research experiments by disease and region. The number of research experiments is normalized for each disease. The heatmap reveals that Africa has the least amount of research conducted on the diseases, while America leads with the most research. Europe comes in second. </p>
+				<p>The heatmap shows the number of research experiments on these diseases in different regions of the world in proportion to each other. The heatmap reveals that Africa has the least amount of research conducted on these diseases, while America leads with the most research. Europe comes in second. </p>
 			</div>
 		</div>
 	</section>
@@ -227,14 +247,14 @@ nav-menu: true
 
 <!-- Main -->
 <div id="main">
-
+<!--
 <section id="one">
 	<div class="inner">
 		<header class="major">
 			<h2>Prevalence-Research Analysis</h2>
 		</header>
 		<p>
-			Having data on quantity of research and disease prevalence in different countries, we can now analyze the relationship between the two. The question of how the prevalence of a disease in a region drives the amount and focus of research conducted there can be answered by comparing the two datasets.
+			Having data on quantity of research and disease prevalence in different countries, we can now analyze the relationship between the two. The question of how the prevalence of a disease in a region drives the amount and focus of research conducted there can be answered by studying the correlation between the two datasets.
 			For each disease, we depict below the prevalence of the given disease against the number of experiments conducted on it:
 			<div id="plot_HIV" style="width: 100%; margin-left: -50px;">
 				{% include plot_HIV.html %}
@@ -270,7 +290,21 @@ nav-menu: true
 		</p>
 	</div>
 </section>
-
+-->
+<section id="one">
+    <div class="inner">
+        <header class="major">
+            <h2>Prevalence-Research Analysis</h2>
+        </header>
+        <p>
+        Having data on quantity of research and disease prevalence in different countries, we can now analyze the relationship between the two. The question of how the prevalence of a disease in a region drives the amount and focus of research conducted there can be answered by studying the correlation between the two datasets.
+		For each disease, we depict below the prevalence of the given disease against the number of experiments conducted on it:
+        </p>
+        <div style="width: 100%;">
+            {% include disease_analysis.html %}
+        </div>
+    </div>
+</section>
 <!-- Three -->
 <section id="three">
 	<div class="inner">
@@ -284,16 +318,27 @@ nav-menu: true
 
 <!-- Two -->
 <section id="two" class="spotlights">
-	<section>
-		<a class="image">
-			<img src="{% link assets/images/region_region_heatmap.png %}" alt="" style="margin-top: 75px;" />
-		</a>
+	<section style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+		<div style="flex: 2;">
+			<div style="width: 450px; height: 338px; overflow: hidden; margin-right: -50px;">
+				<iframe 
+					src="../assets/geo_analysis_heatmaps/region_region_heatmap.html" 
+					style="
+					width: 900px; 
+					height: 676px;  
+					transform: scale(0.5); 
+					transform-origin: top left; 
+					border: none;
+					">
+				</iframe>
+			</div>
+		</div>
 		<div class="content">
 			<div class="inner">
 				<header class="major">
 					<h2>Region-Region ols heatmap</h2>
 				</header>
-				<p>The numbers and colors shown can be best described as measures of the proportions of research conducted in a region given the proportions of a disease's prevalence per capita in a region. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however, there are some relationships in between regions that appear to be stronger. For example, the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive. However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
+				<p>The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive. However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
 			</div>
 		</div>
 	</section>
@@ -306,16 +351,27 @@ nav-menu: true
 	</div>
 </section>
 <section id="two" class="spotlights">
-	<section>
-		<a class="image">
-			<img src="{% link assets/images/region_country_heatmap.png %}" alt="" style="margin-top: 75px;"/>
-		</a>
+	<section style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+		<div style="flex: 2;">
+			<div style="width: 450px; height: 338px; overflow: hidden; margin-right: -50px;">
+				<iframe 
+					src="../assets/geo_analysis_heatmaps/region_country_heatmap.html" 
+					style="
+					width: 900px; 
+					height: 676px;  
+					transform: scale(0.5); 
+					transform-origin: top left; 
+					border: none;
+					">
+				</iframe>
+			</div>
+		</div>
 		<div class="content">
 			<div class="inner">
 				<header class="major">
 					<h2>Country-Country ols heatmap</h2>
 				</header>
-				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, research in France is positively related to disease prevalence in Africa. In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases describe relationships where geographical proportions of disease prevalence per capita predict the proportions of research conducted on the disease in a certain country.</p>
+				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, research in France is positively related to disease prevalence in Africa. In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
 			</div>
 		</div>
 	</section>
