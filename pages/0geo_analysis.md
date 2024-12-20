@@ -203,7 +203,7 @@ nav-menu: true
 	</section>
 	<section>
 		<a class="image">
-			<img src="{% link assets/images/who_heatmap.png %}" alt=""/>
+			<img src="{% link assets/images/research_heatmap.png %}" alt=""/>
 		</a>
 		<div class="content">
 			<div class="inner">
