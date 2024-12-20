@@ -85,7 +85,7 @@ nav-menu: true
 				</header>
 				<p>By taking Morgan fingerprints of two drugs as the input, we are capable of developing a model that could predict the interaction between drug pairs. We use Neural-Network approach to solve this problem. First the NN model treats each drug separately but after two sequential layers, it merges the two inputs in order to make a final prediction. Our model achieves a <b>95.73%</b> overall accuracy in its prediction.</p>
 				<ul class="actions">
-					<li><a href="{{ site.baseurl }}/nn/" class="button">Learn more</a></li>
+					<li><a href="{{ site.baseurl }}/pages/nn.html" class="button">Learn more</a></li>
 				</ul>
 			</div>
 		</div>
