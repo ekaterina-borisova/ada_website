@@ -251,7 +251,6 @@ nav-menu: true
 	</div>
 </section>
 
-<!-- Two -->
 <section id="two" class="spotlights">
 	<section>
 		<a class="image">
