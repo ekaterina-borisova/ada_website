@@ -275,19 +275,19 @@ nav-menu: true
 
 <!-- Two -->
 <section id="two" class="spotlights" style="padding: 20px;">
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; max-width: 1600px; margin: 0 auto;">
+    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; max-width: 1200px; margin: 0 auto;">
         <!-- Heatmap on the Left -->
-        <div style="flex: 3; text-align: center;">
+        <div style="flex-grow: 2; text-align: center;">
             <iframe 
                 src="../assets/geo_analysis_heatmaps/region_region_heatmap.html" 
                 style="
                     width: 100%; 
-                    height: 700px; 
+                    height: 600px; 
                     border: none;">
             </iframe>
         </div>
         <!-- Text Content on the Right -->
-        <div class="content" style="flex: 2; max-width: 500px;">
+        <div class="content" style="flex-grow: 1; max-width: 400px;">
             <div class="inner" style="padding: 20px;">
                 <header class="major">
                     <h2>Regional Disease Prevalences per Capita</h2>

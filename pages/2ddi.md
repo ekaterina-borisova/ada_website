@@ -99,7 +99,7 @@ nav-menu: true
 				<header class="major">
 					<h3>DDI of "Likable" Drugs</h3>
 				</header>
-                <p>Our initial hypothesis suggested that “likable” drugs would have less severe interactions with other drugs. To test this, we examined the severity of interactions where at least one drug was considered “likable.” However, the results indicate that the likability of a drug does not significantly impact the severity of its interactions with other drugs. As a result, we can reject our hypothesis. Based on these findings, we believe that the most effective model for prediction is one that focuses solely on the molecular structures of each drug.</p>
+                <p>Our initial hypothesis suggested that “likable” drugs would have less severe interactions with other drugs. To test this, we examined the severity of interactions where at least one drug was considered “likable.” However, the results indicate that <span style="color: #D3AF36;">the likability of a drug does not significantly impact the severity of its interactions with other drugs</span>. As a result, we can reject our hypothesis. Based on these findings, we believe that the most effective model for prediction is one that focuses solely on the molecular structures of each drug.</p>
             </div>
         </div>
     </section>
