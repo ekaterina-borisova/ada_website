@@ -16,7 +16,7 @@ nav-menu: true
 		<header class="major">
 			<h2>Can one predict interaction of two newly developed drugs?</h2>
 		</header>
-		<p>Testing drugs on their compatibility is one of the major issues in nowadays pharmacology, as these interactions can significantly impact drug efficacy and patient safety. By leveraging data from DrugBank on examples of synergetic drug-drug interactions we came up with several models on how to predict newly developed drugs' interactions. This research combines natural language processing, clustering, and machine learning to tackle the complexities of DDI analysis. By embedding interaction descriptions using BioBERT, we created rich, context-aware representations for clustering interactions based on severity. Furthermore by enriching our dataset with institutional data, we conveyed analysis on how DDI varies with country pairs of their origin. Finally by encoding SMILES of each drug, we used Neural-Network models to predict a potential severity of synergetic interactions. This comprehensive approach aims to enhance our understanding of DDIs and contribute to safer, more effective pharmacological practices.</p>
+		<p>Testing drugs on their compatibility is one of the major issues in nowadays pharmacology, as these interactions can significantly impact drug efficacy and patient safety. By leveraging data from DrugBank on examples of synergetic drug-drug interactions we came up with several models on how to predict newly developed drugs' interactions. This research combines natural language processing, clustering, and machine learning to tackle the complexities of DDI analysis. By embedding interaction descriptions using BioBERT, we created rich, context-aware representations for clustering interactions based on severity. Furthermore we look at possible interesting finding related to severity of interaction in "likable" drugs. Finally by encoding SMILES of each drug, we use Neural-Network models to predict a potential severity of synergetic interactions. This comprehensive approach aims to enhance our understanding of DDIs and contribute to safer, more effective pharmacological practices.</p>
 	</div>
 </section>
 
@@ -83,25 +83,35 @@ nav-menu: true
 				<header class="major">
 					<h3>Prediction Model</h3>
 				</header>
-				<p>By taking Morgan fingerprints of two drugs as the input, we are capable of developing a model that could predict the interaction between drug pairs. We use Neural-Network approach to solve this problem. First the NN model treats each drug separately but after two sequential layers, it merges the two inputs in order to make a final prediction. Our model achieves a <b>95.73%</b> overall accuracy in its prediction.</p>
+				<p>By taking Morgan fingerprints of two drugs as the input, we are capable of developing a model that could predict the interaction between drug pairs. We use Neural-Network approach to solve this problem. First the NN model treats each drug separately but after two sequential layers, it merges the two inputs in order to make a final prediction. Our model achieves a <b>97.48%</b> overall accuracy in its prediction.</p>
 				<ul class="actions">
 					<li><a href="{{ site.baseurl }}/pages/nn.html" class="button">Learn more</a></li>
 				</ul>
 			</div>
 		</div>
 	</section>
+	<section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/label_bar_chart_with_ddi_frequencies.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
+        <div class="content" style="flex: 1;">
+            <div class="inner">
+				<header class="major">
+					<h3>DDI of "Likable" Drugs</h3>
+				</header>
+                <p>Our initial hypothesis suggested that “likable” drugs would have less severe interactions with other drugs. To test this, we examined the severity of interactions where at least one drug was considered “likable.” However, the results indicate that the likability of a drug does not significantly impact the severity of its interactions with other drugs. As a result, we can reject our hypothesis. Based on these findings, we believe that the most effective model for prediction is one that focuses solely on the molecular structures of each drug.</p>
+            </div>
+        </div>
+    </section>
 </section>
 
 <!-- Three -->
 <section id="three">
 	<div class="inner">
 		<header class="major">
-			<h2>Massa libero</h2>
+			<h2>Conclusion</h2>
 		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-		<ul class="actions">
-			<li><a href="generic.html" class="button next">Get Started</a></li>
-		</ul>
+		<p>In this study, we explored various approaches to predict the interactions between newly developed drugs using data from DrugBank. We utilized BioBERT for embedding drug-drug interaction (DDI) descriptions, followed by clustering based on interaction severity, revealing that moderate interactions were most prevalent. Additionally, we employed SMILES-based molecular structures encoded as Morgan fingerprints and used a Neural Network model to predict the severity of drug interactions, achieving a high accuracy of 97.48%. Our hypothesis that “likable” drugs would have less severe interactions was not supported by the data, leading us to conclude that molecular structure-based models are more effective. This research provides valuable insights into DDI prediction and highlights the potential of molecular structure analysis for more accurate predictions.</p>
 	</div>
 </section>
 
