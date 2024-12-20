@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Changed from read to write for helaili/jekyll-action
+  contents: write
   pages: write
   id-token: write
 
@@ -16,18 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-
-      - name: Update RubyGems
-        run: |
-          gem update --system 3.3.22
-          gem install bundler
-
       - name: Build and Deploy
         uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          pre_build_commands: |
+            gem update --system 3.3.22
+            gem install bundler
+            bundle update ffi
