@@ -197,7 +197,7 @@ nav-menu: true
 		</a>
 		<div class="content">
 			<div class="inner">
-				<p>The heatmap shows the prevalences per capita of these diseases in different regions of the world in proportion to each other. We can for example observe that many diseases are more prevalent in regions such as Africa and Eastern Mediterranean, as opposed to the Americas and Western Pacific.</p>
+				<p>This heatmap highlights how common different diseases are in various regions. Regions like <span style="color: #D3AF36;">Africa and the Eastern Mediterranean have higher disease rates</span>, while places like <span style="color: #D3AF36;">the Americas and Western Pacific show lower rates.</span></p>
 			</div>
 		</div>
 	</section>
@@ -207,7 +207,7 @@ nav-menu: true
 		</a>
 		<div class="content">
 			<div class="inner">
-				<p>The heatmap shows the number of research experiments on these diseases in different regions of the world in proportion to each other. The heatmap reveals that Africa has the least amount of research conducted on these diseases, while America leads with the most research. Europe comes in second. </p>
+				<p>Another heatmap shows how much research is done on these diseases in different regions. <span style="color:rgb(179, 35, 162);">Africa has the least research, while the Americas do the most</span>, followed by Europe. This shows big differences in research efforts across regions. </p>
 			</div>
 		</div>
 	</section>
@@ -215,7 +215,7 @@ nav-menu: true
 <!-- Three -->
 <section id="three">
 	<div class="inner">
-		<p>The heatmaps show that regions with a high prevalence of diseases, such as Africa and the Eastern Mediterranean, have the least research conducted on these diseases. In contrast, regions with lower prevalence, such as America and Europe, have the highest research output. This disparity may be due to regions with high disease prevalence lacking the necessary resources for research, while regions with lower prevalence have greater research capacity.  </p>
+		<p>The heatmaps reveal an interesting pattern: regions like Africa and the Eastern Mediterranean, where diseases are more common, have less research. On the other hand, regions like the Americas and Europe, where diseases are less common, lead in research. This may be because regions with high disease rates have fewer resources to focus on research.  </p>
 	</div>
 </section>
 
@@ -252,32 +252,6 @@ nav-menu: true
 </section>
 
 <!-- Two -->
-<<<<<<< HEAD
-<section id="two" class="spotlights" style="padding: 20px;">
-    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; max-width: 1200px; margin: 0 auto;">
-        <!-- Heatmap on the Left -->
-        <div style="flex-grow: 2; text-align: center;">
-            <iframe 
-                src="../assets/geo_analysis_heatmaps/region_region_heatmap.html" 
-                style="
-                    width: 100%; 
-                    height: 600px; 
-                    border: none;">
-            </iframe>
-        </div>
-        <!-- Text Content on the Right -->
-        <div class="content" style="flex-grow: 1; max-width: 400px;">
-            <div class="inner" style="padding: 20px;">
-                <header class="major">
-                    <h2>Regional Disease Prevalences per Capita</h2>
-                </header>
-                <p>
-                    The heatmap shows the prevalences per capita of these diseases in different regions of the world in proportion to each other. For example, we can observe that many diseases are more prevalent in regions such as Africa and Eastern Mediterranean, as opposed to the Americas and Western Pacific.
-                </p>
-            </div>
-        </div>
-    </div>
-=======
 <section id="two" class="spotlights">
 	<section>
 		<a class="image">
@@ -288,11 +262,10 @@ nav-menu: true
 				<header class="major">
 					<h2>Region-Region ols heatmap</h2>
 				</header>
-				<p>The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive. However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
+				<p>The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, <span style="color:rgb(0, 142, 81);">the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive.</span> However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
 			</div>
 		</div>
 	</section>
->>>>>>> 4f359ecd5832f9af7a528cdd9f6d1e868917117a
 </section>
 <!-- Three -->
 <section id="three">
@@ -311,7 +284,7 @@ nav-menu: true
 				<header class="major">
 					<h2>Country-Country ols heatmap</h2>
 				</header>
-				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, research in France is positively related to disease prevalence in Africa. In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
+				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, <span style="color:rgb(0, 142, 81);">research in France is positively related to disease prevalence in Africa.</span> In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
 			</div>
 		</div>
 	</section>
