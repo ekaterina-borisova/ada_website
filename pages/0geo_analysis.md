@@ -66,6 +66,23 @@ nav-menu: true
 	</section>
 </section>
 
+<section id="one">
+    <div class="inner">
+        <header class="major">
+            <h3>World institutions heatmap</h3>
+        </header>
+        <div class="map-container" style="position: relative; width: 100%; height: 600px;">
+            <iframe 
+                src="../assets/geo_analysis_heatmaps/map.html" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+            </iframe>
+        </div>
+    </div>
+	<div class="inner">
+		 <p>This heatmap shows the geographical distribution of institutions conducting experiments in the BindingDB dataset. It is a visual confirmation of our previous observations, the contributions to the dataset are driven by a few hotspots. </p>
+		
+	</div>
+</section>
 <!-- <section id="one">
     <div class="inner">
         <header class="major">
