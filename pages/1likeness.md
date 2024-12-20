@@ -84,8 +84,7 @@ nav-menu: true
                     <h3>Criteria Passing Rates</h3>
                 </header>
                 <p>
-                    This bar chart shows the percentage of drugs that meet each criterion on its own, as well as those that pass all three together. 
-                    It helps to visualize how the criteria overlap and highlights how combining them narrows down the most promising drug candidates. 
+                    The bar chart shows that the majority of drugs pass only the Veber Criteria (25.1%), while a smaller percentage (9.9%) meet all three criteria. Few drugs meet only Lipinski’s Rule (2.7%) or QED Score requirements alone (0.1%), highlighting the stringency of combining all criteria.
 				</p>
             </div>
         </div>
@@ -113,13 +112,13 @@ nav-menu: true
 		<body>
     <ul>
         <li>
-            The clustering of large bubbles within the range below 2000 Daltons (Da) highlights the strong drug-likeness of smaller molecules.
+            The clustering of large bubbles within the range below 2000 Daltons (Da) highlights <span style="color:rgb(0, 142, 81);">the strong drug-likeness of smaller molecules</span>.
         </li>
         <li>
             As Molecular Weight increases beyond 2000 Da, QED Scores drop significantly, with fewer drug-like molecules observed.
         </li>
         <li>
-            Molecules with very high weights, especially above 6000 Da, show almost no drug-like properties.
+            <span style="color: #D3AF36;">Molecules with very high weights</span>, especially above 6000 Da, <span style="color: #D3AF36;">show almost no drug-like properties</span>.
         </li>
     </ul>
 </body></p>
@@ -158,11 +157,17 @@ nav-menu: true
 </section>
 
 <!-- Three -->
-<section id="three">
-	<div class="inner">
-		<header class="major">
-			<h2>Massa libero</h2>
-		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-	</div>
+<section id="three" style="padding: 40px 20px;">
+    <div class="inner" style="padding: 0 40px;">
+        <header class="major">
+            <h2>Conclusion</h2>
+        </header>
+        <p>
+            This analysis provides valuable insights into identifying promising drug candidates by evaluating key properties such as bioavailability, flexibility, and overall suitability for biological targets. Using criteria like Lipinski’s Rule of Five, Veber Criteria, and QED Score, the study highlights important factors that make a molecule more “drug-like.”
+            <br><br>
+            <span style="color:rgb(0, 142, 81);">Smaller molecules, with lower molecular weights, tend to score higher on drug-likeness</span>, showing better bioavailability and suitability. Larger molecules, on the other hand, often struggle to meet these criteria, <span style="color:rgb(179, 35, 162);">making molecular weight a critical factor in drug development</span>. The heatmap reveals a strong positive correlation between molecular weight and rotatable bonds, indicating that <span style="color: #D3AF36;">larger molecules tend to have greater structural flexibility</span>. This flexibility can influence how well a molecule interacts with its target, balancing binding potential and drug-like behavior.
+            <br><br>
+            By combining these tools, the analysis identifies the most promising molecules for further research. This process helps narrow down the options, making drug discovery more efficient and focused.
+        </p>
+    </div>
 </section>
