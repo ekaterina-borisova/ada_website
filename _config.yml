@@ -1,7 +1,7 @@
 # site settings
 title: ADA Project
 subtitle: by HotADA
-email: "ekaterina.borisova@epfl.ch <br> alexandra.krasnova@epfl.ch <br> amine.zghal@epfl.ch <br> Lucas.nicolas@epfl.ch <br> sverre.djuve@epfl.ch"
+email: "ekaterina.borisova@epfl.ch <br> alexandra.krasnova@epfl.ch <br> amine.zghal@epfl.ch <br> lucas.nicolas@epfl.ch <br> sverre.djuve@epfl.ch"
 description: null
 baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
