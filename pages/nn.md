@@ -2,10 +2,8 @@
 layout: post
 title: Neural-Nework Model
 description: Prediction model for DDI
-permalink: /nn/
 image: assets/images/nn.png
 nav-menu: false
-published: false
 ---
 <div class="row">
     <div class="6u 12u$(small)">
