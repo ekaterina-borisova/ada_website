@@ -1,7 +1,7 @@
 ---
 title: Geographical Analysis
 layout: post
-description: 'Geographical Analysis'
+description: 'Geographical Analysis of research experiments on drugs and targets'
 image: assets/images/geo_analysis.jpg
 nav-menu: true
 ---
@@ -113,7 +113,7 @@ nav-menu: true
       </div>
     `;
   });
-</script> -->
+</script>
 
 <section id="one">
 	<div class="inner">
