@@ -22,27 +22,29 @@ nav-menu: true
 
 <!-- Two -->
 <section id="two" class="spotlights">
-	<section>
-		<div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-			<img src="{% link assets/images/BioBert.png %}" alt="BioBert" width="100%" frameborder="0"/>
-		</div>
-		<div class="content" style="flex: 2;">
-			<div class="inner">
-				<header class="major">
-					<h3>BioBert & Clustering Interactions</h3>
-				</header>
-				<p>BioBERT (Bidirectional Encoder Representations from Transformers for Biomedical Text Mining) is a domain-specific extension of the BERT language model, designed specifically for biomedical and clinical text. Unlike standard BERT, which is trained on general language data, BioBERT incorporates large-scale biomedical corpora such as PubMed and PMC articles.</p>
-			</div>
-		</div>
-	</section>
-	<section>
-		<iframe src="../assets/plots/label_bar_chart.html" width="100%" height="500" frameborder="0"></iframe>
-		<div class="content">
-			<div class="inner">
-				<p>Once we utilized BioBERT to generate embeddings for each drug-drug interaction (DDI) description, we applied the K-Means algorithm to cluster the interactions based on the severity of their effects. The interactions were grouped into three main categories: <span style="color:rgb(0, 142, 81);">Minor</span>, <span style="color: #D3AF36;">Moderate</span>, and <span style="color:rgb(179, 35, 162);">Major</span>. Notably, a greater number of DDIs were classified as <span style="color: #D3AF36;">Moderate</span>, reflecting a prevalent level of intermediate severity in the dataset.</p>
-			</div>
-		</div>
-	</section>
+    <section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <img src="{% link assets/images/BioBert.png %}" alt="BioBert" width="100%" frameborder="0"/>
+        </div>
+        <div class="content" style="flex: 1;">
+            <div class="inner">
+                <header class="major">
+                    <h3>BioBert & Clustering Interactions</h3>
+                </header>
+                <p>BioBERT (Bidirectional Encoder Representations from Transformers for Biomedical Text Mining) is a domain-specific extension of the BERT language model, designed specifically for biomedical and clinical text. Unlike standard BERT, which is trained on general language data, BioBERT incorporates large-scale biomedical corpora such as PubMed and PMC articles.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/label_bar_chart.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
+        <div class="content" style="flex: 1;">
+            <div class="inner">
+                <p>Once we utilized BioBERT to generate embeddings for each drug-drug interaction (DDI) description, we applied the K-Means algorithm to cluster the interactions based on the severity of their effects. The interactions were grouped into three main categories: <span style="color:rgb(0, 142, 81);">Minor</span>, <span style="color: #D3AF36;">Moderate</span>, and <span style="color:rgb(179, 35, 162);">Major</span>. Notably, a greater number of DDIs were classified as <span style="color: #D3AF36;">Moderate</span>, reflecting a prevalent level of intermediate severity in the dataset.</p>
+            </div>
+        </div>
+    </section>
 </section>
 
 <!-- One -->
@@ -73,15 +75,17 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<img src="{% link assets/images/nn.png %}" alt="" data-position="25% 25%" />
+		<div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/nn_cm.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
 		<div class="content">
 			<div class="inner">
 				<header class="major">
 					<h3>Prediction Model</h3>
 				</header>
-				<p>By taking Morgan fingerprints of two drugs as the input, we are capable of developing a model that could predict the interaction between drug pairs. We use Neural-Network approach to solve this problem. First the NN model treats each drug separately but after two sequential layers, it merges the two inputs in order to make a final prediction. Our model achieves a 95.73% overall accuracy in its prediction.</p>
+				<p>By taking Morgan fingerprints of two drugs as the input, we are capable of developing a model that could predict the interaction between drug pairs. We use Neural-Network approach to solve this problem. First the NN model treats each drug separately but after two sequential layers, it merges the two inputs in order to make a final prediction. Our model achieves a <b>95.73%</b> overall accuracy in its prediction.</p>
 				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
+					<li><a href="{{ site.baseurl }}/nn/" class="button">Learn more</a></li>
 				</ul>
 			</div>
 		</div>
