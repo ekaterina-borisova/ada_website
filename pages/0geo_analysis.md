@@ -263,7 +263,7 @@ nav-menu: true
 <section id="two" class="spotlights">
     <section>
         <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <iframe src="../assets/plots/region_disease-region_research_ols.html.html" width="100%" height="500" frameborder="0"></iframe>
+            <iframe src="../assets/plots/region_disease-region_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
         </div>
         <div class="content" style="flex: 1;">
             <div class="inner">
