@@ -203,7 +203,7 @@ nav-menu: true
 	</section>
 	<section>
 		<a class="image">
-			<img src="{{ site.baseurl }}/assets/images/research_heatmap.png" alt=""/>
+			<img src="{{ site.url }}{{ site.baseurl }}/assets/images/research_heatmap.png" alt=""/>
 		</a>
 		<div class="content">
 			<div class="inner">
