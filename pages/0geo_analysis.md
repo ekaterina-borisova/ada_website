@@ -261,19 +261,19 @@ nav-menu: true
 </section>
 
 <section id="two" class="spotlights">
-	<section>
-		<a class="image">
-			<img src="{{ site.url }}{{ site.baseurl }}/assets/images/region_region_heatmap.png" alt="" style="margin-top: 75px;" />
-		</a>
-		<div class="content">
-			<div class="inner">
+    <section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/egion_disease-region_research_ols.html.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
+        <div class="content" style="flex: 1;">
+            <div class="inner">
 				<header class="major">
 					<h2>Region-Region ols heatmap</h2>
 				</header>
 				<p>The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, <span style="color:rgb(0, 142, 81);">the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive.</span> However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
-			</div>
-		</div>
-	</section>
+            </div>
+        </div>
+    </section>
 </section>
 <!-- Three -->
 <section id="three">
