@@ -20,5 +20,5 @@ nav-menu: false
 </div>
 
 <div style="text-align: center;">
-    <img src="{% link assets/images/nn.png %}" alt="" data-position="25% 25%" />
+    <img src="{{ site.url }}{{ site.baseurl }}assets/images/nn.png" alt="" data-position="25% 25%" />
 </div>

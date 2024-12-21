@@ -24,7 +24,7 @@ nav-menu: true
 <section id="two" class="spotlights">
     <section>
         <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <img src="{% link assets/images/BioBert.png %}" alt="BioBert" width="100%" frameborder="0"/>
+            <img src="{{ site.url }}{{ site.baseurl }}assets/images/BioBert.png" alt="BioBert" width="100%" frameborder="0"/>
         </div>
         <div class="content" style="flex: 1;">
             <div class="inner">
@@ -61,8 +61,8 @@ nav-menu: true
 	<section>
 		<a href="generic.html" class="image">
 			<div class="hover-image-wrapper">
-				<img src="{% link assets/images/mol.png %}" alt="" class="image-default" />
-				<img src="{% link assets/images/fingerprints.png %}" alt="" class="image-hover" />
+				<img src="{{ site.url }}{{ site.baseurl }}assets/images/mol.png" alt="" class="image-default" />
+				<img src="{{ site.url }}{{ site.baseurl }}assets/images/fingerprints.png" alt="" class="image-hover" />
 			</div>
 		</a>
 		<div class="content">

@@ -254,7 +254,7 @@ nav-menu: true
 <section id="two" class="spotlights">
 	<section>
 		<a class="image">
-			<img src="{% link assets/images/region_region_heatmap.png %}" alt="" style="margin-top: 75px;" />
+			<img src="{{ site.url }}{{ site.baseurl }}assets/images/region_region_heatmap.png" alt="" style="margin-top: 75px;" />
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -276,7 +276,7 @@ nav-menu: true
 <section id="two" class="spotlights">
 	<section>
 		<a class="image">
-			<img src="{% link assets/images/region_country_heatmap.png %}" alt="" style="margin-top: 75px;"/>
+			<img src="{{ site.url }}{{ site.baseurl }}assets/images/region_country_heatmap.png" alt="" style="margin-top: 75px;"/>
 		</a>
 		<div class="content">
 			<div class="inner">
