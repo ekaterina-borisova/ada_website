@@ -292,6 +292,7 @@ nav-menu: true
 				</header>
 				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, <span style="color:rgb(0, 142, 81);">research in France is positively related to disease prevalence in Africa.</span> In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
 			</div>
+		</div>
     </section>
 </section>
 <!-- Three -->
