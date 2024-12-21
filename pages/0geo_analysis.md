@@ -203,6 +203,7 @@ nav-menu: true
                     while places like <span style="color: #D3AF36;">the Americas and Western Pacific show lower rates.</span>
                 </p>
 			</div>
+		</div>
     </section>
 	<section>
         <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
@@ -216,6 +217,7 @@ nav-menu: true
                     followed by Europe. This shows big differences in research efforts across regions.
                 </p>
 			</div>
+		</div>
     </section>
 </section>
 
