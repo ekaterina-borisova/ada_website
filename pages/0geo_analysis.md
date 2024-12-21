@@ -263,7 +263,7 @@ nav-menu: true
 <section id="two" class="spotlights">
     <section>
         <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <iframe src="../assets/plots/egion_disease-region_research_ols.html.html" width="100%" height="500" frameborder="0"></iframe>
+            <iframe src="../assets/plots/region_disease-region_research_ols.html.html" width="100%" height="500" frameborder="0"></iframe>
         </div>
         <div class="content" style="flex: 1;">
             <div class="inner">
@@ -283,19 +283,18 @@ nav-menu: true
 	</div>
 </section>
 <section id="two" class="spotlights">
-	<section>
-		<a class="image">
-			<img src="{{ site.url }}{{ site.baseurl }}/assets/images/region_country_heatmap.png" alt="" style="margin-top: 75px;"/>
-		</a>
-		<div class="content">
+    <section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/region_disease-country_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
+        <div class="content" style="flex: 1;">
 			<div class="inner">
 				<header class="major">
 					<h2>Region-Country ols heatmap</h2>
 				</header>
 				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, <span style="color:rgb(0, 142, 81);">research in France is positively related to disease prevalence in Africa.</span> In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
 			</div>
-		</div>
-	</section>
+    </section>
 </section>
 <!-- Three -->
 <section id="three">
