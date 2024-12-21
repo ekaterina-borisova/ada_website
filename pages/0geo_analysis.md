@@ -191,34 +191,34 @@ nav-menu: true
 
 <!-- Two -->
 <section id="two" class="spotlights">
-	<section>
-        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <iframe src="../assets/plots/who_disease_heatmap.html" width="100%" height="500" frameborder="0"></iframe>
-        </div>
-        <div class="content" style="flex: 1;">
+	<section style="display: flex; flex-direction: row; width: 100%;">
+		<div class="image" style="flex: 0 0 50%; padding-right: 20px;">
+			<iframe src="../assets/plots/who_disease_heatmap.html" width="100%" height="500" frameborder="0"></iframe>
+		</div>
+		<div class="content" style="flex: 0 0 50%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
 			<div class="inner">
-                <p style="font-size: 0.9em;">
-                    This heatmap highlights how common different diseases are in various regions. Regions like 
-                    <span style="color: #D3AF36;">Africa and the Eastern Mediterranean have higher disease rates</span>, 
-                    while places like <span style="color: #D3AF36;">the Americas and Western Pacific show lower rates.</span>
-                </p>
+				<p style="font-size: 0.9em; word-wrap: break-word;">
+					This heatmap highlights how common different diseases are in various regions. Regions like 
+					<span style="color: #D3AF36;">Africa and the Eastern Mediterranean have higher disease rates</span>, 
+					while places like <span style="color: #D3AF36;">the Americas and Western Pacific show lower rates.</span>
+				</p>
 			</div>
 		</div>
-    </section>
-	<section>
-        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <iframe src="../assets/plots/research_heatmap.html" width="100%" height="500" frameborder="0"></iframe>
-        </div>
-        <div class="content" style="flex: 1;">
+	</section>
+	<section style="display: flex; flex-direction: row; width: 100%;">
+		<div class="content" style="flex: 0 0 50%; padding-right: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
 			<div class="inner">
-                <p style="font-size: 0.9em;">
-                    Another heatmap shows how much research is done on these diseases in different regions. 
-                    <span style="color:rgb(179, 35, 162);">Africa has the least research, while the Americas do the most</span>, 
-                    followed by Europe. This shows big differences in research efforts across regions.
-                </p>
+				<p style="font-size: 0.9em; word-wrap: break-word;">
+					Another heatmap shows how much research is done on these diseases in different regions. 
+					<span style="color:rgb(179, 35, 162);">Africa has the least research, while the Americas do the most</span>, 
+					followed by Europe. This shows big differences in research efforts across regions.
+				</p>
 			</div>
 		</div>
-    </section>
+		<div class="image" style="flex: 0 0 50%; padding-left: 20px; display: flex; justify-content: center; align-items: center;">
+			<iframe src="../assets/plots/research_heatmap.html" width="100%" height="500" frameborder="0"></iframe>
+		</div>
+	</section>
 </section>
 
 <!-- Three -->
@@ -261,19 +261,22 @@ nav-menu: true
 </section>
 
 <section id="two" class="spotlights">
-    <section>
-        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <iframe src="../assets/plots/region_disease-region_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
-        </div>
-        <div class="content" style="flex: 1;">
-            <div class="inner">
+	<section style="display: flex; flex-direction: row; width: 100%;">
+		<div class="content" style="flex: 0 0 50%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
+			<div class="inner">
 				<header class="major">
 					<h2>Region-Region ols heatmap</h2>
 				</header>
-				<p>The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, <span style="color:rgb(0, 142, 81);">the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive.</span> However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).</p>
-            </div>
-        </div>
-    </section>
+				<p style="font-size: 0.9em; word-wrap: break-word;">
+					The coefficients represent the magnitude and direction of the relationship between geographical distribution of disease prevalence per capita and the distribution of research conducted on the disease within specific regions. Observing the diagonal, we can in effect observe that the relationship between prevalence and research is in general not very strong within regions. There are however some relationships in between regions that appear to be stronger. For example, 
+					<span style="color:rgb(0, 142, 81);">the relationship between prevalence in Western Pacific and research in the Americas seems to be strongly positive.</span> However, we cannot safely make any conclusions from this analysis, as none of the results are statistically significant (p-values are all above 0.10).
+				</p>
+			</div>
+		</div>
+		<div style="flex: 0 0 50%; padding-right: 20px; display: flex; justify-content: center; align-items: center;">
+			<iframe src="../assets/plots/region_disease-region_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
+		</div>
+	</section>
 </section>
 <!-- Three -->
 <section id="three">
@@ -283,19 +286,23 @@ nav-menu: true
 	</div>
 </section>
 <section id="two" class="spotlights">
-    <section>
-        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
-            <iframe src="../assets/plots/region_disease-country_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
-        </div>
-        <div class="content" style="flex: 1;">
+	<section style="display: flex; flex-direction: row; width: 100%;">
+		<div style="flex: 0 0 60%; padding-right: 20px; display: flex; justify-content: center; align-items: center;">
+			<iframe src="../assets/plots/region_disease-country_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
+		</div>
+		<div class="content" style="flex: 0 0 40%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
 			<div class="inner">
 				<header class="major">
 					<h2>Region-Country ols heatmap</h2>
 				</header>
-				<p>The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, <span style="color:rgb(0, 142, 81);">research in France is positively related to disease prevalence in Africa.</span> In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.</p>
+				<p style="font-size: 0.9em; word-wrap: break-word;">
+					The cells with thick borders indicate statistically significant relationships. We can observe that there are some countries where the relationship between prevalence and research is statistically significant. For example, 
+					<span style="color:rgb(0, 142, 81);">research in France is positively related to disease prevalence in Africa.</span> In total 15 out of 144 relationships are statistically significant (p-value < 0.1). All these cases represent relationships where the geographical distribution of disease prevalence per capita predicts the distribution of research conducted on the disease within specific countries.
+				</p>
 			</div>
 		</div>
-    </section>
+	</section>
+
 </section>
 <!-- Three -->
 <section id="three">
