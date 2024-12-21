@@ -262,7 +262,7 @@ nav-menu: true
 
 <section id="two" class="spotlights">
 	<section style="display: flex; flex-direction: row; width: 100%;">
-		<div class="content" style="flex: 0 0 50%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
+		<div class="content" style="flex: 0 0 35%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
 			<div class="inner">
 				<header class="major">
 					<h2>Region-Region ols heatmap</h2>
@@ -273,8 +273,8 @@ nav-menu: true
 				</p>
 			</div>
 		</div>
-		<div style="flex: 0 0 50%; padding-right: 20px; display: flex; justify-content: center; align-items: center;">
-			<iframe src="../assets/plots/region_disease-region_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
+		<div style="flex: 0 0 65%; padding-right: 20px; display: flex; justify-content: center; align-items: center;">
+			<iframe src="../assets/plots/region_disease-region_research_ols.html" width="100%" height="100%" frameborder="0"></iframe>
 		</div>
 	</section>
 </section>
@@ -287,10 +287,10 @@ nav-menu: true
 </section>
 <section id="two" class="spotlights">
 	<section style="display: flex; flex-direction: row; width: 100%;">
-		<div style="flex: 0 0 60%; padding-right: 20px; display: flex; justify-content: center; align-items: center;">
-			<iframe src="../assets/plots/region_disease-country_research_ols.html" width="100%" height="500" frameborder="0"></iframe>
+		<div style="flex: 0 0 70%; padding-right: 20px; display: flex; justify-content: center; align-items: center;">
+			<iframe src="../assets/plots/region_disease-country_research_ols.html" width="100%" height="100%" frameborder="0"></iframe>
 		</div>
-		<div class="content" style="flex: 0 0 40%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
+		<div class="content" style="flex: 0 0 30%; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word;">
 			<div class="inner">
 				<header class="major">
 					<h2>Region-Country ols heatmap</h2>
