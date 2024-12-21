@@ -191,33 +191,31 @@ nav-menu: true
 
 <!-- Two -->
 <section id="two" class="spotlights">
-    <section style="display: flex; flex-wrap: wrap; align-items: center;">
-        <a class="image" style="flex: 2; padding: 10px;">
-            <img src="{{ site.url }}{{ site.baseurl }}/assets/images/who_heatmap.png" alt="" style="width: 100%; height: auto;"/>
-        </a>
-        <div class="content" style="flex: 1; padding: 10px;">
-            <div class="inner">
+	<section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/who_disease_heatmap.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
+        <div class="content" style="flex: 1;">
+			<div class="inner">
                 <p style="font-size: 0.9em;">
                     This heatmap highlights how common different diseases are in various regions. Regions like 
                     <span style="color: #D3AF36;">Africa and the Eastern Mediterranean have higher disease rates</span>, 
                     while places like <span style="color: #D3AF36;">the Americas and Western Pacific show lower rates.</span>
                 </p>
-            </div>
-        </div>
+			</div>
     </section>
-    <section style="display: flex; flex-wrap: wrap; align-items: center;">
-        <a class="image" style="flex: 2; padding: 10px;">
-            <img src="{{ site.url }}{{ site.baseurl }}/assets/images/research_heatmap.png" alt="" style="width: 100%; height: auto;"/>
-        </a>
-        <div class="content" style="flex: 1; padding: 10px;">
-            <div class="inner">
+	<section>
+        <div style="flex: 2; display: flex; justify-content: center; align-items: center;">
+            <iframe src="../assets/plots/research_heatmap.html" width="100%" height="500" frameborder="0"></iframe>
+        </div>
+        <div class="content" style="flex: 1;">
+			<div class="inner">
                 <p style="font-size: 0.9em;">
                     Another heatmap shows how much research is done on these diseases in different regions. 
                     <span style="color:rgb(179, 35, 162);">Africa has the least research, while the Americas do the most</span>, 
                     followed by Europe. This shows big differences in research efforts across regions.
                 </p>
-            </div>
-        </div>
+			</div>
     </section>
 </section>
 
