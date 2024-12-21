@@ -193,7 +193,7 @@ nav-menu: true
 <section id="two" class="spotlights">
 	<section>
 		<a class="image">
-			<img src="{% link assets/images/who_heatmap.png %}" alt=""/>
+			<img src="{{ site.url }}{{ site.baseurl }}/assets/images/who_heatmap.png" alt=""/>
 		</a>
 		<div class="content">
 			<div class="inner">
